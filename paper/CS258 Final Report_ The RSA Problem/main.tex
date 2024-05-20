@@ -47,10 +47,10 @@
 \subsection{Reinforcement Learning Algorithms}
 % List RL algorithms and give a brief explanation of each
 \subsubsection{PPO}
-The first Reinforcement Learning (RL) algorithm that was used is PPO, which is shortened for Proximal Policy Optimization. PPO is one of the most commonly used RL algorithms. It learns on-policy which means it updates the policy of each stage based on the data collected by the current policy during training. PPO focuses on balancing between improving the policy and avoiding large updates which stabilizes learning.
+The first Reinforcement Learning (RL) algorithm that was used is PPO [1], which is shortened for Proximal Policy Optimization. PPO is one of the most commonly used RL algorithms. It learns on-policy which means it updates the policy of each stage based on the data collected by the current policy during training. PPO focuses on balancing between improving the policy and avoiding large updates which stabilizes learning.
 
 \subsubsection{DQN}
-The second RL algorithm that was used is DQN algorithm, which is shortened for Deep Q-Network. DQN is widely used in games as it is estimates the expected total long term reward when traveling through an optimal policy. It first initializes an empty neural network, then travels randomly, stores the results (rewards), then learns from those results.
+The second RL algorithm that was used is DQN algorithm [2], which is shortened for Deep Q-Network. DQN is widely used in games as it is estimates the expected total long term reward when traveling through an optimal policy. It first initializes an empty neural network, then travels randomly, stores the results (rewards), then learns from those results.
 
 The main difference between the two RL algorithms is that PPO is a policy-based algorithm which comes up with a policy function. On the other hand, DQN is a value-based algorithm which learns a Q-function to estimate the expected future rewards when taking the next action.
 
@@ -148,8 +148,11 @@ The results clearly indicated that DQN learned much better compared to PPO. For 
 
 \bibliography{ref}
 \bibliographystyle{ieeetr}
+[1] OpenAI, "Proximal Policy Optimization", openai.com
+https://openai.com/index/openai-baselines-ppo
 
-
+\noindent [2] OpenAI, "OpenAI Baselines: DQN", openai.com
+https://openai.com/index/openai-baselines-dqn
 \end{document}
 
 
