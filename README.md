@@ -12,9 +12,6 @@ $$U(e) := \dfrac{1}{T}\sum_{t = 0}^{T-1}\dfrac{o_t(e)}{c(e)}.$$
 The formal objective is to achieve maximum network-wide utilization. We define the network-wide utilization $U$ as the average of the edge total utility:
 $$\text{Maximize } U := \dfrac{1}{|E|}\sum_{e\in E}U(e)$$
 
-The continuity and capacity constraints should be imposed following our Assignment 4.
-
-
 ## Methods
 ### Routing
 - After creating a gymnasium environment, we utilize multiple disjoint paths between arbitrary source and destination nodes
@@ -35,6 +32,9 @@ The continuity and capacity constraints should be imposed following our Assignme
      - ```np.random.randint(min_ht, max_ht)```
      - Use ```min_ht = 10``` and ```max_ht = 20```
      - For simplicity, we terminate the simulation after accommodating (or blocking) the last ($T$-th) request. No need to wait for all residing requests to leave. We only care about the utilization until the handing of the last request.
+- The reward at each timestep is
+   - ```-1``` if the request is blocked
+   - the ```ht``` value for the request if it is accomodated
 
 ## Evaluation
 Given that a holding time for any request can range from ```10``` to ```19``` and that there are ```100``` rounds, the expected return from an episode should be ```1,450``` if no blocking is experienced. We see in Case II that DQN converges to this value. Our routing algorithm performs similarly to the simple shortest path algorithm because there is not an overload of requests with the same source and destination pair as seen in Case I.
