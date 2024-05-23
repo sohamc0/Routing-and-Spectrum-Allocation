@@ -37,8 +37,10 @@ $$\text{Maximize } U := \dfrac{1}{|E|}\sum_{e\in E}U(e)$$
    - the ```ht``` value for the request if it is accomodated
 
 ## Evaluation
-Given that a holding time for any request can range from ```10``` to ```19``` and that there are ```100``` rounds, the expected return from an episode should be ```1,450``` if no blocking is experienced. We see in Case II that DQN converges to this value. Our routing algorithm performs similarly to the simple shortest path algorithm because there is not an overload of requests with the same source and destination pair as seen in Case I.
+Given that a holding time for any request can range from ```10``` to ```19``` and that there are ```100``` rounds, the expected return from an episode should be ```1,450``` if no blocking is experienced. We see in Case II that DQN converges to this value. Our routing algorithm performs similarly to the simple shortest path algorithm because there is not an overload of requests with the same source and destination pair as seen in Case I. 
+![Case II](imgs/case-2.png)
 In Case I, however, our algorithm significantly outperforms the shortest path approach. Obviously, when the number of edges and, subsequently, links are constrained in the network, our algorithm would be a smarter choice to use.
+![Case I](imgs/case-1.png)
 
 ## Paper
 - View paper in ```paper``` sub-directory
